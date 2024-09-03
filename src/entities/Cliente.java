@@ -17,4 +17,9 @@ public class Cliente {
         return id;
     }
 
+    @Override
+    public String toString() {
+        return "Cliente: id = " + id + "Nome = " + nome;
+    }
+
 }

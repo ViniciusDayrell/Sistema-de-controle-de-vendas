@@ -25,7 +25,6 @@ public class Loja {
         this.historicoVendas = vendas;
     }
 
-    // Adicionar verificação de cliente ja existente
     public void cadastrarCliente(Cliente cliente) {
         if (buscaCliente(cliente.getNome()) == null) {
             clientes.add(cliente);
@@ -79,8 +78,23 @@ public class Loja {
         return null;
     }
 
-    // listar produtos disponiveis
-    // listar clientes cadastrados
+    public void listaProdutos() {
+        for (Produto produto : produtos) {
+            System.out.println(produto);
+        }
+    }
+
+    public void listaClientesCadastrados() {
+        for (Cliente cliente : clientes) {
+            System.out.println(cliente);
+        }
+    }
+
+    public void listarHistoricoVendas() {
+        for (Venda venda : historicoVendas) {
+            System.out.println(venda);
+        }
+    }
     // listar historico de vendas
 
 }

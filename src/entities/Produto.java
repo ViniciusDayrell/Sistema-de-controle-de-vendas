@@ -25,6 +25,10 @@ public class Produto {
         return codigo;
     }
 
+    public int getQuantidadeEstoque() {
+        return quantidadeEstoque;
+    }
+
     public void adicionarEstoque(int quantidade) {
         if (quantidade > 0) {
             this.quantidadeEstoque += quantidade;
@@ -38,6 +42,12 @@ public class Produto {
         }
         return false;
 
+    }
+
+    @Override
+    public String toString() {
+        return "Produto: " + nome + ", Preco: " + preco + ", Codigo: " + codigo + ", Quantidade em estoque: "
+                + quantidadeEstoque;
     }
 
 }
